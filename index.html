@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/index.js"></script>
+    <title>API do CEP</title>
+</head>
+<body>
+    <header>
+        <nav id="navbarHeader">
+            <a href="#" id="logoHeader">
+                Luwi
+            </a>
+        </nav>
+    </header>
+
+    <main id="mainContainer">
+        <form action="./js/index.js" method="GET" id="preenchimentoCepForm">
+            <label for="cep">
+                CEP:
+                <input type="text" name="cep" id="cep" value="" size="10" max-length="9" onblur="pesquisaCep(this.value)" required>
+            </label><br>
+            <label for="rua">
+                Rua:
+                <input type="text" name="rua" id="rua" size="60">
+            </label><br>
+            <label for="bairro">
+                Bairro:
+                <input type="text" name="bairro" id="bairro" size="40">
+            </label><br>
+            <label for="cidade">
+                Cidade:
+                <input type="text" name="cidade" id="cidade" size="40">
+            </label><br>
+            <label for="estado">
+                Estado:
+                <input type="text" name="estado" id="estado" size="40">
+            </label><br>
+            <label for="ibge">
+                IBGE:
+                <input type="text" name="ibge" id="ibge" size="8">
+            </label><br>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lucas Witchemichen. Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
