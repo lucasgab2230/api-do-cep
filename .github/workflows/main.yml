@@ -1,0 +1,30 @@
+name: API do CEP
+
+on:
+  push:
+  - main
+
+  pull_request:
+  - main
+
+jobs:
+  setup_node:
+    name: Setup Node.js
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout GitHub Actions
+    - uses: actions/checkout@v4
+
+    - name: Download/Install Node.js
+    - uses: actions/setup-node@v4.1.0
+      with:
+        node_version: '22.x'
+        
+        check_latest: false
+
+    - name: Verify Node.js version
+    - run: node -v
+
+    - name: Verify NPM Version
+    - run: npm -v
